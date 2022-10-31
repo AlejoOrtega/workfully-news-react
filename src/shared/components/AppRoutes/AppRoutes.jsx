@@ -9,6 +9,10 @@ const AppRoutes = () => {
       path: "home",
       element: <Home />,
     },
+    {
+      path: "/",
+      element: <Home />,
+    },
 
     {
       path: "admin",
