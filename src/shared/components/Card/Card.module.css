@@ -1,0 +1,20 @@
+.article__preview {
+  max-width: 100%;
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+  flex-wrap: wrap;
+}
+
+.article__previewImg {
+  max-width: 300px;
+  height: auto;
+}
+
+.article__previewText {
+  width: 500px;
+}
+.article__previewText,
+.article__previewText p {
+  padding-top: 20px;
+}
