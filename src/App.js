@@ -1,11 +1,17 @@
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import AppRoutes from "./shared/components/AppRoutes/AppRoutes";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      
+    <div>
+      <BrowserRouter>
+        <React.Suspense fallback={<h1>Loading</h1>}>
+          <AppRoutes />
+        </React.Suspense>
+      </BrowserRouter>
     </div>
-     
   );
-}
+};
 
 export default App;
