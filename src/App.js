@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter } from "react-router-dom";
 import AppRoutes from "./shared/components/AppRoutes/AppRoutes";
 import Card from "./shared/components/Card/Card";
+import Layout from "./shared/components/Layout/Layout";
 
 const App = () => {
   const [articles, setArticles] = useState([]);
@@ -16,6 +17,7 @@ const App = () => {
 
   return (
     <div>
+      <Layout>
       {articles.map((item) => {
         return (
           <Card>
@@ -32,6 +34,7 @@ const App = () => {
           <AppRoutes />
         </React.Suspense>
       </BrowserRouter>
+      </Layout>
     </div>
   );
 };
