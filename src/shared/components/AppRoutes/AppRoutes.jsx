@@ -25,6 +25,10 @@ const AppRoutes = () => {
       element: <NotFoundPage />,
     },
     {
+      path: "article",
+      element: <ReadersView/>
+    },
+    {
       path: "article/:id",
       element: <ReadersView />,
     },
