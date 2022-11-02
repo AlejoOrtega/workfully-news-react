@@ -1,5 +1,6 @@
 import Card from "../shared/components/Card/Card";
 import useGlobalContext from "../hooks/useGlobalContext";
+import {useState, useEffect} from 'react';
 
 //* Variables
 const url = "http://localhost:3000/articles";
