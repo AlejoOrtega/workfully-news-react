@@ -32,3 +32,26 @@ code {
   align-items: center;
   width: 70vw;
 }
+
+.main-column {
+  width: 80%;
+  text-align: center;
+}
+
+.title {
+  font-size: 38px;
+}
+
+.description {
+  font-size: 26px;
+  height: 72px;
+}
+
+.thumbnail {
+  font-size: 18px;
+}
+
+.content {
+  font-size: 26px;
+  height: 256px;
+}

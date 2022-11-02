@@ -9,12 +9,16 @@ function CardThumbnail({ img }) {
     <img src={img} alt="thumbnail" className={styles.article__previewImg} />
   );
 }
+function CardLateral({ children }) {
+  return <>{children}</>;
+}
 
 function Card({ children }) {
   return <div className={styles.article__preview}>{children}</div>;
 }
 Card.CardText = CardText;
 Card.CardThumbnail = CardThumbnail;
+Card.CardLateral = CardLateral;
 
 export default Card;
 
