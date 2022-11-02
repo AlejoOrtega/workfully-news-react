@@ -10,10 +10,8 @@ function CardThumbnail({ img }) {
   );
 }
 
-function CardSideBar({children}) {
-  return (
-    <div className={styles.card__sidebar}>{children}</div>
-  )
+function CardSideBar({ children }) {
+  return <div className={styles.card__sidebar}>{children}</div>;
 }
 
 function Card({ children }) {
