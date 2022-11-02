@@ -4,6 +4,7 @@ import Home from "../../../pages/Home";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import NotFoundPage from "../../../pages/Not_found";
 import ReadersView from "../../../pages/Readers_view";
+import JournalistView from "../../../pages/Journalist_view"
 
 const AppRoutes = () => {
   return useRoutes([
@@ -15,10 +16,10 @@ const AppRoutes = () => {
       path: "/",
       element: <Home />,
     },
-
     {
       path: "admin",
-      element: <PrivateRoute redirectTo="/home" />,
+      // element: <PrivateRoute redirectTo="/home" />,
+      element: <JournalistView/>,
     },
     {
       path: "*",
