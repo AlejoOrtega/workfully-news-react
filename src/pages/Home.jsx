@@ -30,9 +30,6 @@ function Home() {
                 <p>{item.description}</p>
               </Card.CardText>
             </Card>
-            <Card>
-              <Card.CardLateral>HAHAHS</Card.CardLateral>
-            </Card>
           </Link>
         );
       })}

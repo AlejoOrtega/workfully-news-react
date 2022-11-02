@@ -1,4 +1,5 @@
 import Card from "../shared/components/Card/Card";
+import useGlobalContext from "../hooks/useGlobalContext";
 
 //* Variables
 const url = "http://localhost:3000/articles";
@@ -40,6 +41,7 @@ async function saveBtn() {
 }
 
 function JournalistView() {
+  const { articles } = useGlobalContext();
   return (
     <div className="sidebar">
       {articles.map((article) => {
@@ -53,3 +55,5 @@ function JournalistView() {
     </div>
   );
 }
+
+export default JournalistView;
