@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Link } from "react-router-dom";
 import Card from "../shared/components/Card/Card";
 import useGlobalContext from "../hooks/useGlobalContext";
 
@@ -20,16 +21,19 @@ function Home() {
     <div className="articles__container">
       {articles.map((item, index) => {
         return (
-          <a href="/">
+          <Link to={`/article/${item.id}`} key={item.id}>
             <Card>
-              {index === 0 ? "" : <hr class="inner-separator" />}
+              {index === 0 ? "" : <hr className="inner-separator" />}
               <Card.CardThumbnail img={item.thumbnail} />
               <Card.CardText>
                 <h1>{item.title}</h1>
                 <p>{item.description}</p>
               </Card.CardText>
             </Card>
-          </a>
+            <Card>
+              <Card.CardLateral>HAHAHS</Card.CardLateral>
+            </Card>
+          </Link>
         );
       })}
     </div>

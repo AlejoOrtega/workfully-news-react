@@ -2,6 +2,7 @@ import React from "react";
 import { useRoutes } from "react-router-dom";
 import Home from "../../../pages/Home";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import NotFoundPage from "../../../pages/Not_found";
 
 const AppRoutes = () => {
   return useRoutes([
