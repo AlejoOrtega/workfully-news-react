@@ -1,0 +1,19 @@
+/* ROOT */
+:root {
+    --dark-mode-elements: hsl(207, 6%, 35%);
+    --dark-mode-background: hsl(210, 12%, 24%); /* Dark Mode Background */
+    --light-mode-text: hsl(207, 26%, 17%); /* Dark Mode Background */
+    --light-mode-input: hsl(0, 0%, 52%);
+    --light-mode-background: hsl(0, 0%, 98%);
+    --dark-mode-text: hsl(0, 0%, 100%);
+  }
+  
+  /* Utilities */
+  .bg-light {
+    background-color: var(--light-mode-background);
+  }
+  
+  .bg-dark {
+    background-color: var(--dark-mode-background);
+  }
+  

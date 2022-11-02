@@ -1,5 +1,5 @@
 .footer {
-    height: 5rem;
+    height: 7rem;
   }
   
   .container {
@@ -9,3 +9,11 @@
     align-items: center;
   }
   
+  .footer--light {
+    background-color: var(--light-mode-background);
+    color: var(--light-mode-text);
+  }
+  
+  .footer--dark {
+    color: var(--dark-mode-text);
+  }

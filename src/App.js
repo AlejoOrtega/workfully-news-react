@@ -3,8 +3,11 @@ import { BrowserRouter } from "react-router-dom";
 import AppRoutes from "./shared/components/AppRoutes/AppRoutes";
 import Card from "./shared/components/Card/Card";
 import Layout from "./shared/components/Layout/Layout";
+import { ThemeContext } from "./shared/context/ThemeContext";
+import style from "./App.module.css"
 
 const App = () => {
+  const [theme, setTheme] = React.useState(true);
   const [articles, setArticles] = useState([]);
   useEffect(() => {
     const getData = async () => {
@@ -16,7 +19,8 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <ThemeContext.Provider value={{ theme, setTheme }}>
+    <div className={style[theme ? "bg-light" : "bg-dark"]}>
       <Layout>
       {articles.map((item) => {
         return (
@@ -36,6 +40,7 @@ const App = () => {
       </BrowserRouter>
       </Layout>
     </div>
+    </ThemeContext.Provider>
   );
 };
 

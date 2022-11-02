@@ -4,6 +4,16 @@
   height: 80px;
 }
 
+.header--light {
+    background-color: var(--light-mode-background);
+    color: var(--light-mode-text);
+  }
+  
+  .header--dark {
+    background-color: var(--dark-mode-elements);
+    color: var(--dark-mode-text);
+  }
+
 .container {
   align-items: center;
   display: flex;
@@ -44,3 +54,21 @@
   background-color: grey;
   color: white;
 }
+
+button {
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    gap: 0.5rem;
+    margin-left: 20px;
+  }
+  
+  .button--light {
+    color: var(--light-mode-text);
+  }
+
+  .button--dark {
+    color: var(--dark-mode-text);
+  }
+  
