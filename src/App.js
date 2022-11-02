@@ -18,7 +18,7 @@ const App = () => {
     } catch (error) {
       console.log(error);
     }
-  }, [setArticles, articles]);
+  }, [setArticles]);
   return (
     <LoginStatus>
       <Layout>

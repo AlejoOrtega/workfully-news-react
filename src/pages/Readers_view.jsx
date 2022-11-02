@@ -49,6 +49,15 @@ function Readers_view() {
       .then((data) => setArticle(data));
   }, [counter]);
 
+  useEffect(() => {
+    const url = `http://localhost:3000/articles`;
+    fetch(url, {
+      method: "GET",
+    })
+      .then((res) => res.json())
+      .then((data) => setArticles(data));
+  }, [counter]);
+
   const handleOnCreateArticle = () => {
     setArticle({ ...INITIAL_STATE });
     setIsNew(() => true);
@@ -56,10 +65,10 @@ function Readers_view() {
 
   const handleOnChangeArticle = () => {
     setIsNew(() => false);
-    setCounter(counter + 1);
   };
   const handleSave = () => {
     saveBtn(article);
+    setCounter(counter + 1);
   };
 
   return (
