@@ -4,7 +4,7 @@ import Home from "../../../pages/Home";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import NotFoundPage from "../../../pages/Not_found";
 import ReadersView from "../../../pages/Readers_view";
-import JournalistView from "../../../pages/Journalist_view"
+import JournalistView from "../../../pages/Journalist_view";
 
 const AppRoutes = () => {
   return useRoutes([
@@ -24,10 +24,10 @@ const AppRoutes = () => {
       path: "*",
       element: <NotFoundPage />,
     },
-    {
-      path: "article",
-      element: <ReadersView/>
-    },
+    // {
+    //   path: "article",
+    //   element: <ReadersView/>
+    // },
     {
       path: "article/:id",
       element: <ReadersView />,

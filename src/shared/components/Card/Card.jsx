@@ -15,7 +15,11 @@ function CardSideBar({ children }) {
 }
 
 function Card({ children, handleClick }) {
-  return <div className={styles.article__preview} onClick={handleClick}>{children}</div>;
+  return (
+    <div className={styles.article__preview} onClick={handleClick}>
+      {children}
+    </div>
+  );
 }
 Card.CardText = CardText;
 Card.CardThumbnail = CardThumbnail;
