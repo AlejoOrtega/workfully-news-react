@@ -48,6 +48,11 @@ function Readers_view() {
               </Card>
             );
           })}
+          <Card key={article.id}>
+            <Card.CardSideBar>
+              <p>Create Article</p>
+            </Card.CardSideBar>
+          </Card>
         </div>
       )}
       <div className="main-column">

@@ -18,8 +18,7 @@ const AppRoutes = () => {
     },
     {
       path: "admin",
-      // element: <PrivateRoute redirectTo="/home" />,
-      element: <JournalistView/>,
+      element: <PrivateRoute redirectTo="/home" />,
     },
     {
       path: "*",
