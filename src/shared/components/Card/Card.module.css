@@ -18,3 +18,19 @@
 .article__previewText p {
   padding-top: 20px;
 }
+
+.card__sidebar {
+  background-color: lightgrey;
+  color: #3c4858;
+  width: auto;
+  padding: 15px;
+  border-radius: 3px;
+  gap: 10px;
+  margin-top: 10px;
+  border: 2px solid lightgrey;
+}
+
+.card__sidebar:hover {
+  border: 2px solid black;
+  cursor: pointer;
+}

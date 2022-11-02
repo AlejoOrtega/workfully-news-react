@@ -1,3 +1,5 @@
+import Card from "../shared/components/Card/Card";
+
 //* Variables
 const url = "http://localhost:3000/articles";
 let currentArticle = {};
@@ -35,4 +37,19 @@ async function saveBtn() {
       console.log("Failed to update");
     }
   });
+}
+
+function JournalistView() {
+  return (
+    <div className="sidebar">
+      {articles.map((article) => {
+        <Card>
+          <Card.CardSideBar>
+            <p>TITLE: {article.title}</p>
+            <p>AUTHOR: {article.author}</p>
+          </Card.CardSideBar>
+        </Card>;
+      })}
+    </div>
+  );
 }

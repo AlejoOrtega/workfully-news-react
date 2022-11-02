@@ -10,11 +10,18 @@ function CardThumbnail({ img }) {
   );
 }
 
+function CardSideBar({children}) {
+  return (
+    <div className={styles.card__sidebar}>{children}</div>
+  )
+}
+
 function Card({ children }) {
   return <div className={styles.article__preview}>{children}</div>;
 }
 Card.CardText = CardText;
 Card.CardThumbnail = CardThumbnail;
+Card.CardSideBar = CardSideBar;
 
 export default Card;
 
