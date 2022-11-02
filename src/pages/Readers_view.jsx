@@ -3,15 +3,17 @@ import { useParams, useNavigate } from "react-router-dom";
 import useGlobalContext from "../hooks/useGlobalContext";
 import Button from "../shared/components/Button/Button";
 import Card from "../shared/components/Card/Card";
+import { Link } from "react-router-dom";
 function Readers_view() {
   let { id } = useParams();
-  const [article, setArticle] = useState({
+  const INITIAL_STATE = {
     title: "",
     description: "",
     thumbnail: "",
     author: "",
     content: "",
-  });
+  }
+  const [article, setArticle] = useState(INITIAL_STATE);
   const isEditable =
     window.localStorage.getItem("isLogged") === "false" ? false : true;
 
@@ -34,21 +36,27 @@ function Readers_view() {
     setArticle(localArticle);
   }, [articles, id]);
 
+  const handleOnCreateArticle = () => {
+    setArticle({...INITIAL_STATE})
+  }
+
   return (
     <div className="article__container">
       {isEditable && (
         <div className="sidebar">
           {articles.map((article) => {
             return (
-              <Card key={article.id}>
-                <Card.CardSideBar>
-                  <p>TITLE: {article.title}</p>
-                  <p>AUTHOR: {article.author}</p>
-                </Card.CardSideBar>
-              </Card>
+              <Link to={`/article/${article.id}`} key={article.id}>
+                <Card key={article.id}>
+                  <Card.CardSideBar>
+                    <p>TITLE: {article.title}</p>
+                    <p>AUTHOR: {article.author}</p>
+                  </Card.CardSideBar>
+                </Card>
+              </Link>
             );
           })}
-          <Card key={article.id}>
+          <Card key={article.id} handleClick={handleOnCreateArticle}>
             <Card.CardSideBar>
               <p>Create Article</p>
             </Card.CardSideBar>
