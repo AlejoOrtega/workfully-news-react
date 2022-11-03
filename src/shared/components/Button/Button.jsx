@@ -1,14 +1,16 @@
-import style from "Button.module.css";
+import style from "./Button.module.css";
 
 /**
  * Create a button.
- * @param {name, handleClick} param0 
+ * @param {name, handleClick} param0
  * @returns button.
  */
-function Button({name, handleClick}) {
-    return(
-        <button className={style.btn} onClick={handleClick}>{name}</button>
-    )
+function Button({ children, handleClick }) {
+  return (
+    <button className={style.btn} onClick={handleClick}>
+      {children}
+    </button>
+  );
 }
 
 export default Button;
