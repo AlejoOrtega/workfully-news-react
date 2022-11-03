@@ -7,8 +7,16 @@
 }
 
 .article__previewImg {
-  max-width: 300px;
-  height: auto;
+  float: left;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.article__previewImg:first-child{
+  margin-left: -20px;
 }
 
 .article__previewText {
@@ -16,7 +24,8 @@
 }
 .article__previewText,
 .article__previewText p {
-  padding-top: 20px;
+  padding-top: 8px;
+  text-align: justify;
 }
 
 .card__sidebar {
