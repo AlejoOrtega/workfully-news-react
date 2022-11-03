@@ -30,7 +30,7 @@ const onReadersView = () => {
       <div className={style.container}>
         <a href="/home"><img className={style.wlogo} src={theme ? logoLight : logoDark} alt='workfully' /></a>
         <div className="user-roles">
-            <Button children={<h1>Reader</h1>} handleClick={onReadersView} />
+            <Button children={<h1 className={`${style.h1}  ${style[`h1--${themeMode}`]}`}>Reader</h1>} handleClick={onReadersView} />
             <Button children={<h1>Journalist</h1>} handleClick={onJournalistView} />
           <button onClick={handleTheme}>
             <img src={theme ? iconLight : iconDark} />
