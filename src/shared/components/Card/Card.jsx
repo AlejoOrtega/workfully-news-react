@@ -1,22 +1,31 @@
 import styles from "./Card.module.css";
+import React from "react";
+import { ThemeContext } from "../../../shared/context/ThemeContext";
+
+
 
 function CardText({ children }) {
-  return <div className={styles.article__previewText}>{children}</div>;
-}
-
-function CardThumbnail({ img }) {
-  return (
-    <img src={img} alt="thumbnail" className={styles.article__previewImg} />
-  );
-}
-
-function CardSideBar({ children }) {
-  return <div className={styles.card__sidebar}>{children}</div>;
-}
-
-function Card({ children, handleClick }) {
-  return (
-    <div className={styles.article__preview} onClick={handleClick}>
+  const { theme, setTheme } = React.useContext(ThemeContext);
+  let themeMode = theme ? "light" : "dark";
+  return <div className={`${styles.article__previewText}  ${styles[`article__previewText--${themeMode}`]}`}>
+{/* <div className={styles.article__previewText}> */}
+  {children}
+  </div>;
+  }
+  
+  function CardThumbnail({ img }) {
+    return (
+      <img src={img} alt="thumbnail" className={styles.article__previewImg} />
+      );
+    }
+    
+    function CardSideBar({ children }) {
+      return <div className={styles.card__sidebar}>{children}</div>;
+    }
+    
+    function Card({ children, handleClick }) {
+      return (
+        <div className={styles.article__preview} onClick={handleClick}>
       {children}
     </div>
   );

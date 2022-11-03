@@ -15,17 +15,31 @@
   object-fit: cover;
 }
 
-.article__previewImg:first-child{
+.article__previewImg:first-child {
   margin-left: -20px;
 }
 
 .article__previewText {
   width: 500px;
 }
+
 .article__previewText,
 .article__previewText p {
   padding-top: 8px;
   text-align: justify;
+}
+
+.article__previewText--light {
+  background-color: var(--light-mode-background);
+  color: var(--light-mode-text);
+  text-decoration: underline white;
+}
+
+.article__previewText--dark {
+  /* background-color: var(--dark-mode-elements); */
+  color: var(--dark-mode-text);  
+  text-decoration: underline var(--dark-mode-background);
+
 }
 
 .card__sidebar {
